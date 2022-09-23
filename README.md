@@ -1,5 +1,14 @@
 # CRUD-operations Single Page Application
 
+On this app you will be able to do the basic of crud-operation on a web application on angular
+
+some examples are:
+• POST 
+• GET
+• PUT|PATCH 
+• DELETE 
+• LOGIN PAGE
+
 ## Install on Development 
 
 + Install the VsCode

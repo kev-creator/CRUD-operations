@@ -2,6 +2,12 @@
 
 On this app you will be able to do the basic of crud-operation on a web application on angular
 
+In this application the administrator has the ability to see a list of users in a table with their identification number that is received from the api, in the same way they can see a detailed information of the user, they can also edit and or delete it. 
+
+Basic crud methods were used to handle user information that is received. 
+
+In the edit section the admin can change name information email etc. contains validators and max length etc.
+
 some examples are:
 • POST 
 • GET

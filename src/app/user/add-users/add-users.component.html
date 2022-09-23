@@ -1,0 +1,77 @@
+<mat-card class="add-user">
+  <mat-card-title>Create New User</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="addUserForm" (submit)="createUser()">
+      <p class="inputs">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="name" />
+          <mat-error
+            *ngIf="
+              addUserForm.controls['email'].hasError('email') &&
+              !addUserForm.controls['email'].hasError('minLength')
+            "
+          >
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="addUserForm.controls['name'].hasError('required')">
+            Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p class="inputs">
+        <mat-form-field appearance="outline">
+          <mat-label>Email Address</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="email" />
+          <mat-error
+            *ngIf="
+              addUserForm.controls['email'].hasError('email') &&
+              !addUserForm.controls['email'].hasError('required')
+            "
+          >
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="addUserForm.controls['email'].hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p class="inputs">
+        <mat-form-field appearance="outline">
+          <mat-label>Status</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="status" />
+          <mat-error
+            *ngIf="addUserForm.controls['status'].hasError('required')"
+          >
+            Status is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p class="inputs">
+        <mat-form-field appearance="outline">
+          <mat-label>Select Gender</mat-label>
+          <mat-select formControlName="gender">
+            <mat-option> </mat-option>
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+          <mat-error
+            *ngIf="addUserForm.controls['gender'].hasError('required')"
+          >
+            Selecting a Gender is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="!addUserForm.valid"
+        >
+          Create User
+        </button>
+      </p>
+    </form>
+  </mat-card-content>
+</mat-card>

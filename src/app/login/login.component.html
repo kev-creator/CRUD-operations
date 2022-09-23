@@ -1,0 +1,36 @@
+<div>
+  <mat-card class="align-center">
+    <mat-toolbar color="primary">Login Page</mat-toolbar>
+    <form [formGroup]="loginForm" class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>User Name</mat-label>
+        <input
+          matInput
+          placeholder="User Name"
+          formControlName="email"
+          [(ngModel)]="email"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder="Password"
+          type="Password"
+          formControlName="password"
+          [(ngModel)]="password"
+        />
+      </mat-form-field>
+
+      <button
+        mat-stroked-button
+        class="btn"
+        color="primary"
+        (click)="loginUser()"
+      >
+        Log In
+      </button>
+    </form>
+  </mat-card>
+</div>

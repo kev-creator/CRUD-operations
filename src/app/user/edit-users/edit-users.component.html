@@ -1,0 +1,28 @@
+<mat-card class="edit-user">
+  <mat-card-title>Update User</mat-card-title>
+  <mat-card-content>
+    <form
+      *ngIf="isLoading"
+      [formGroup]="editUserForm"
+      (submit)="updateUserForm()"
+    >
+      <p class="inputs">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="name" />
+          <mat-hint>Ex: Juan del Pueblo</mat-hint>
+        </mat-form-field>
+      </p>
+      <p class="inputs">
+        <mat-form-field appearance="outline">
+          <mat-label>Email Address</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="email" />
+          <mat-hint>Ex: juan@gmail.com</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <button mat-raised-button color="primary">Update User</button>
+      </p>
+    </form>
+  </mat-card-content>
+</mat-card>

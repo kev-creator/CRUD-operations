@@ -1,27 +1,52 @@
-# AppWorkAdmin
+# CRUD-operations Single Page Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+## Install on Development 
 
-## Development server
++ Install the VsCode
++ Clone repository to a container volume
++ Open a terminal inside VsCode and run:
+```
+npm run start
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Install on Locally
+  
+### NodeJS Intallation - Windows / Mac OS
 
-## Code scaffolding
+Go to https://nodejs.org/en/download/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### NodeJS Intallation - Ubuntu
 
-## Build
+```
+sudo apt install nodejs
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Package Installation
 
-## Running unit tests
+first navigate to the directory where is located the `package.json` and run the following command:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+``` 
+$ npm ci
+```
 
-## Running end-to-end tests
+## Running App
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+before running the Angulare app make sure the backend is running on ports `5001` for https and port `5000` on http.
 
-## Further help
+Then run
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+``` 
+npm start 
+```  
+
+and open on browser http://localhost:4200/ to prewiew project
+
+## Visual Code Extensions
+
+* Editor Config
+* Github Copilot
+* Angular Schematics
+* ES lint
+* indent-rainbow
+* Prettier
+* Tailwind CSS IntelliSense

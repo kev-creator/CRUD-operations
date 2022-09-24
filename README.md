@@ -15,6 +15,8 @@ some examples are:
 • DELETE 
 • LOGIN PAGE
 
+https://crud-basics-3c258-default-rtdb.web.app
+
 ## Install on Development 
 
 + Install the VsCode

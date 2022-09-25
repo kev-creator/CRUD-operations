@@ -21,6 +21,7 @@ import {
 } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { FormsModule } from '@angular/forms';
     MatSnackBarModule,
     MatTableModule,
     FormsModule,
+    MatPaginatorModule,
   ],
   providers: [
     {

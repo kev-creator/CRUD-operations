@@ -17,6 +17,10 @@ some examples are:
 
 https://crud-operations-ten.vercel.app
 
+USERNAME: admin@gmail.com
+
+PASSWORD: admin
+
 ## Install on Development 
 
 + Install the VsCode

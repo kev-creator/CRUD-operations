@@ -15,7 +15,7 @@ some examples are:
 • DELETE 
 • LOGIN PAGE
 
-https://crud-basics-3c258-default-rtdb.web.app
+https://crud-operations-ten.vercel.app
 
 ## Install on Development 
 

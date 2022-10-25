@@ -8,9 +8,9 @@ import {
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Users } from 'src/app/models/users.model';
-import { UserService } from 'src/app/services/user.service';
 import { ChangeDetectorRef } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-list-users',

@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
       this._snackBar.open('Welcome Admin');
       this.router.navigate(['users/list']);
     } else {
-      (err: any) => {
+      (_err: any) => {
         this._snackBar.open('Wrong Credentials');
       };
     }

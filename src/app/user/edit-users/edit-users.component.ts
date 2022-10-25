@@ -7,8 +7,8 @@ import {
 } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
-import { finalize, takeUntil } from 'rxjs';
-import { UserService } from 'src/app/services/user.service';
+import { finalize } from 'rxjs';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-edit-users',
@@ -65,13 +65,12 @@ export class EditUsersComponent implements OnInit {
       .updateUsers(this.userDetails.id, this.editUserForm.value)
       .pipe(finalize(() => (this.isLoading = false)))
       .subscribe({
-        next: (data = this.userObj) => {
+        next: (_data = this.userObj) => {
           this._snackBar.open('User Updated Succesfully');
-          (err: any) => {
+          (_err: any) => {
             this._snackBar.open('Unable to Update user');
           };
         },
       });
-    console.log(this.editUserForm.value);
   }
 }

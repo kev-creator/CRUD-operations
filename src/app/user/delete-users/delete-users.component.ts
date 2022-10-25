@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from 'src/app/services/user.service';
+import { ActivatedRoute } from '@angular/router';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-delete-users',
@@ -26,9 +26,9 @@ export class DeleteUsersComponent implements OnInit {
 
     if (this.userId) {
       this.userService.deleteUser(this.userId).subscribe({
-        next: (data = this.userDetails.value) => {
+        next: (_data = this.userDetails.value) => {
           this._snackBar.open('User deleted Succesfully');
-          (err: any) => {
+          (_err: any) => {
             this._snackBar.open('Unable to delete user');
           };
         },

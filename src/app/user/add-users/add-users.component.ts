@@ -5,8 +5,8 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { UserService } from 'src/app/services/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-add-users',
@@ -37,10 +37,10 @@ export class AddUsersComponent implements OnInit {
 
   createUser() {
     this.userService.addUsers(this.addUserForm.value).subscribe(
-      (data = this.userObj) => {
+      (_data = this.userObj) => {
         this._snackBar.open('User Created Succesfully');
       },
-      (err) => {
+      (_err) => {
         this._snackBar.open('Unable to create user');
       }
     );
